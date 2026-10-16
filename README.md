@@ -1,17 +1,26 @@
-This is your group repo for your final project for COGS108.
+# NBA Player Analytics: Predicting Wins, Injuries, and Social Media Engagement
 
-This repository is private, and is only visible to the course instructors and your group mates; it is not visible to anyone else.
+For our project we wanted to find which variables are most predictive of NBA player's wins, injuries, and social media engagement. It is important to know that we were not trying to prove causation, just predictability. We tried to find the most predictive variables by looking at correlation. We used three datasets to make regression plots and correlation matrices.
 
-Template notebooks for each component are provided. The numbers on the notebook filenames provides the order things are due.  See the syllabus for the due dates in your quarter.
+We found that for player wins, high efficiency, impact and minutes per game are indicative of high career wins. For injuries we were not able to find a significant predictor, only that players with less minutes per game are usually those who had injuries but this only reflects the idea that injured players do not play when recovering. Players with higher scoring output and impact usually have higher social media engagement.
 
-You will be graded based solely on the numbered Jupyter notebooks in this repository.  You will recieve your grade and feedback on how to improve via GitHub Issues on this repository. 
+## Datasets
 
-We have created a suggested organization for your repo, including directory structures for storing `./data`, `./results`, and for creating `./modules` that your notebooks can import. 
+- NBA Stats: https://www.kaggle.com/datasets/sumitrodatta/nba-aba-baa-stats
+- Injuries: https://www.kaggle.com/datasets/loganlauton/nba-injury-stats-1951-2023
+- Social Power: https://www.kaggle.com/datasets/noahgift/social-power-nba
 
-Its worth noting that `./data` is for storing local copies of the data, but by default this repo is configured to **not** allow you to store common datafiles in GitHub.  This is because GitHub has low limits on maximum file and repo size.  So instead you would download your data direct from its original provider or from your personal cloud storage. There are scripts inside some of the notebooks to download data from any URL to `./data`.  If you wish to remove this limitation and store small data files directly in your GitHub you should edit your `.gitignore` file.
+Raw datasets can be found at data/00-raw
 
-But this is *your* repo. You are free to manage the repo as you see fit, edit this README, add data files anywhere you want, etc. So long as there are the four numbered Jupyter notebooks in place on the due dates with the required information, the rest is up to you. 
+## Guide
 
-At the final project date there is an option to make your final project visible to others.  If you choose this option your repo will become publicly visible. 
+- 03-FinalProject: contains the essential, it is the formal presentation of our project.
+- 02-EDACheckpoint: contains the everything in 00-ProjectProposal & 01-DataCheckpoint plus the extensive exploratory data analysis we did to achieve our results.
 
-Also, you are encouraged to share this project after the course and to add it to your portfolio. If your repo is public you may fork it. If it is private you may follow [these instructions](https://docs.google.com/document/d/1_PP-vlsyWjNegGGsmeDB5B-ltjYW1Db14q9dx3HM9e4/edit?usp=sharing)
+## Limitations
+
+- Social Media engagement dataset only contained 1 season with 239 players. To better and more accurate results we would need to find a dataset which contains far more seasons with even more players.
+- Our project only shows correlation, so we are not finding any causes to player's wins, injuries or social media engagement, we are simply finding which variables can be used to predict either of those three out of an existing correlation between the two.
+
+#
+Social media engagement analysis (cleaning, correlation screening, position and team comparisons): Gareth Arroyo.
